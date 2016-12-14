@@ -1,0 +1,29 @@
+- var items = []
+- items.push({ 'image': '2016', 'text': 'Мотопарк 2016 года' })
+- items.push({ 'image': '23/10', 'text': '23 квадроцикла<br />10 снегоходов' })
+- items.push({ 'image': '23/10', 'text': 'Большой<br />выбор трасс' })
+- items.push({ 'text': 'В 10 минутах езды<br />от Санкт-Петербурга' })
+- items.push({ 'text': 'Экипировка<br />бесплатно' })
+
+.wrapper.block
+  .cont
+    .item
+      .item_inner
+        .image 2016
+        .text Мотопарк 2016 года
+    .item
+      .item_inner
+        .image 23/10
+        .text 23 квадроцикла<br />10 снегоходов
+    .item
+      .item_inner
+        .image: .flag
+        .text Большой<br />выбор трасс
+    .item
+      .item_inner
+        .image 10#[span.min мин.]
+        .text В 10 минутах езды<br />от Санкт-Петербурга
+    .item
+      .item_inner
+        .image: .shield
+        .text Экипировка<br />бесплатно
