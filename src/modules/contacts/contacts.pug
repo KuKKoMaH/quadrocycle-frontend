@@ -1,0 +1,39 @@
+include ../button/button
+
+.block
+  h2 Как нас найти
+  .content
+    .bg
+    .wrapper: .cont
+      .col: .tabs
+        #footer-common.tab.tab_active
+          .loc
+            b База проката находится:#[br]
+            |Лен. обл, Красносельский р-н#[br]
+            |СНТ "Надежда" 22 линия
+          .cont
+            .how Как добраться?
+            .phones
+              |+7 (812) #[b 222-99-99]#[br]
+              |+7 (911) #[b 002-92-33]
+            .buttons
+              a.button(href='#' data-for='footer-car'): +button('ghost') на машине
+              a.button(href='#' data-for='footer-transport'): +button('ghost') общественным транспортом
+        #footer-transport.tab
+          a.button.close(href='#' data-for='footer-common')
+          h6 Как добраться общественным транспортом?
+          p
+            |Просто текстовая инфа
+            |Осуществляем ремонт и техническое обслуживание мототехники
+            |В наличии необходимые детали для BRP, Yamaha,
+            |CF moto x5, x8, x10, Polaris. Работают специалисты с 7 летним стажем необходимые детали для BRP
+        #footer-car.tab
+          a.button.close(href='#' data-for='footer-common')
+          h6 Как добраться на машине?
+          p
+            |Просто текстовая инфа
+            |Осуществляем ремонт и техническое обслуживание мототехники
+            |В наличии необходимые детали для BRP, Yamaha,
+            |CF moto x5, x8, x10, Polaris. Работают специалисты с 7 летним стажем необходимые детали для BRP
+
+    #map(data-lng='30.484231' data-lat='59.952553' data-zoom='14')

@@ -1,0 +1,43 @@
+@import "grid.styl";
+
+// ====================================
+// colors
+// ====================================
+$black        = #343434
+$white        = #ffffff
+$yellow       = #fee514
+$yellow2      = #f4da00
+$yellow3      = #fecc15
+$red          = #ff3f3f
+$green        = #47d609
+$blue         = #0d82e4
+$cyan         = #0ed8da
+$grey200      = #ebebeb
+$grey300      = #efefef
+$grey700      = #7e7e7e
+
+// ====================================
+// grid settings
+// ====================================
+column-width    = 70px
+column-gutter   = 15px
+column-count    = 12
+
+container-width = ( column-width * column-count ) + ( column-gutter * 2 * ( column-count - 1 ) )
+
+// ====================================
+// helpers
+// ====================================
+
+transparentBG(){
+  background-image: url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7");
+}
+
+sprite($url)
+  background: url($url)
+  width: image-width($url)
+  height: image-height($url)
+
+ff_days()
+  font-family: 'Days', sans-serif
+

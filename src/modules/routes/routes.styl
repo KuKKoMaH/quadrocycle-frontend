@@ -1,0 +1,119 @@
+.row
+  span(12)
+
+.header
+  float: left
+  height: 94px
+  line-height: 84px
+  margin-right: 10px
+  padding: 0 50px 0 39px
+  font-size: 20px
+  background: linear-gradient(to bottom, $grey200 0, $grey300 100%)
+  color: $grey700
+  border: 2px solid $grey200
+  transition: all .1s ease-out
+  position: relative
+  z-index: 1
+
+  &_active
+    border-bottom: 2px solid $white
+    background: $white
+    color: $black
+
+    &:before
+      opacity: 1
+
+.quadro,
+.snow
+  &:before
+    content: ''
+    vc()
+    margin-right: 28px
+    opacity: .7
+    transition: all .1s ease-out
+.quadro:before
+  sprite('../../sprite/sprite-quadrocycle.png')
+.snow:before
+  sprite('../../sprite/sprite-snowmobile.png')
+
+.tabs
+  margin-top: -2px
+  border: 2px solid $grey200
+  padding: 15px 13px 36px
+  box-shadow: 0px 5px 70px 0px rgba(0, 0, 0, 0.1)
+
+.inner
+  position: relative
+
+.tab
+  position: absolute
+  opacity: 0
+  left: 0
+  top: 0
+  width: 100%
+  cf()
+  transition: all .2s ease-out
+
+  &_active
+    position: relative
+    opacity: 1
+    z-index: 1
+
+.item
+  float: left
+  width: 50%
+  padding: 15px
+
+  &_inner
+    border: 2px solid $grey200
+    height: 277px
+    position: relative
+    padding: 18px 25px 18px 133px
+    font-size: 13px
+
+.image
+  position: absolute
+  left: -2px
+  top: -2px
+
+.title
+  font-size: 20px
+  font-weight: bold
+  margin-bottom: 9px
+
+.description
+  line-height: 1.55
+
+.bullets
+  margin: 17px 0
+  cf()
+
+.bullet
+  float: left
+  margin-right: 26px
+
+.time,
+.distance
+  &:before
+    content: ''
+    vc()
+    margin-right: 10px
+.time:before
+  sprite('../../sprite/sprite-time.png')
+.distance:before
+  sprite('../../sprite/sprite-distance.png')
+
+.prices
+  font-size: 14px
+
+.price_header
+  font-weight: bold
+  margin-bottom: 1px
+
+.price
+  font-size: 16px
+  font-weight: bold
+
+.old
+  text-decoration: line-through
+  font-weight: bold

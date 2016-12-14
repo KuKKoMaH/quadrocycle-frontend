@@ -1,0 +1,75 @@
+.block
+  margin-top: 58px
+  margin-bottom: 74px
+  font-size: 14px
+
+.left
+  span(7)
+
+.right
+  span(5)
+
+.title
+  ff_days()
+  font-size: 16px
+  font-weight: normal
+  text-transform: uppercase
+  margin-bottom: 32px
+
+.lists
+  content()
+
+.list
+  span(4)
+
+.list_title
+  font-size: 16px
+  line-height: 1.7
+  font-weight: bold
+  margin-bottom: 11px
+
+.bullet
+  position: relative
+  padding-left: 16px
+  margin-bottom: 7px
+
+  &:before
+    content: ''
+    display: block
+    position: absolute
+    left: 0
+    top: 4px
+    width: 7px
+    height: 7px
+    border-radius: 50%
+    background: $black
+
+.sub
+  padding-left: 8px
+
+.more
+  float: right
+  position: relative
+  z-index: 1
+
+.passport,
+.money,
+.child
+  position: relative
+  padding-left: 42px
+  padding-bottom: 17px
+  &:before
+    content ''
+    position: absolute
+    left:0
+    top: 0
+
+.passport:before
+  sprite('../../sprite/sprite-passport.png')
+.money:before
+  sprite('../../sprite/sprite-money.png')
+  top: 2px
+.child:before
+  sprite('../../sprite/sprite-child.png')
+  left: 4px
+

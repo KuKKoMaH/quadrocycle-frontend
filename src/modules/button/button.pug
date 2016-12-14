@@ -1,0 +1,10 @@
+mixin button(style, text)
+  case style
+    when 'sm'
+      .button.sm: block
+    when 'ghost'
+      .button.ghost: block
+    when 'submit'
+      input.button(type='submit' value=text)
+    default
+      .button: block

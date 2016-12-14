@@ -1,0 +1,43 @@
+mixin quadro()
+  .item
+    .title CFMOTO - 1000
+    .table
+      .row
+        .name Объём двигателя
+        .value 483 см3
+      .row
+        .name Мощность
+        .value 32 лс
+      .row
+        .name Подключаемый полный привод
+        .value Есть
+      .row
+        .name Максимальная скорость
+        .value 50 км/ч
+      .row
+        .name Кол-во мест
+        .value 2
+
+.block
+  h2 Мотопарк квадромир
+  .wrapper
+    .cont
+      .section_title Взрослые квадроциклы
+      .item_wrapper
+        img.image(src='../../img/quadrocycle-1.png')
+        +quadro()
+      .item_wrapper
+        img.image(src='../../img/quadrocycle-2.png')
+        +quadro()
+      .section_title Детские квадроциклы
+      .item_wrapper
+        img.image(src='../../img/quadrocycle-1.png')
+        +quadro()
+      .item_wrapper
+        img.image(src='../../img/quadrocycle-2.png')
+        +quadro()
+      .section_title Снегоходы
+      .item_wrapper
+        img.image(src='../../img/quadrocycle-3.png')
+        +quadro()
+

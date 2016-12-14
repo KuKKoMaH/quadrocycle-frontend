@@ -1,0 +1,16 @@
+include ../button/button
+
+.block
+  .bottom
+    .wrapper
+      .cont.content
+        h1.title
+          |Прокат квадроциклов#[br]
+          | и снегоходов в СПБ и ЛО#[br]
+          | от 1000 руб / час
+        .footer
+          .loc СНТ Надежда (юго-запад), 10 км от КАД
+          .fos
+            | Оставьте заявку и получите консультацию о прокате
+            a.button.open_popup(href='#request')
+              +button() Оставить заявку

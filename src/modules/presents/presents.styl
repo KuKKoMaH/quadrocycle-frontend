@@ -1,0 +1,94 @@
+.block
+  margin-top: 60px
+
+.items
+  margin: 51px -5px 64px
+  cf()
+
+.item_wrapper
+  float: left
+  width: 20%
+  padding: 0 5px
+  text-align: center
+
+.item
+  position: relative
+  border: 2px solid $grey200
+  padding: 46px 22px 25px
+
+  &:before
+    content: ''
+    display: block
+    position: absolute
+    left: -4px
+    top: -4px
+
+.title
+  font-size: 15px
+  line-height: 1.6
+  margin-bottom: 5px
+
+  &:before
+    content: ''
+    display: block
+    margin: 0 auto 21px
+
+.sub
+  font-size: 13px
+
+.under
+  margin-top: 14px
+  font-size: 12px
+  line-height: 1.8
+  color: $grey700
+
+.yellow
+  .item:before
+    sprite('../../sprite/sprite-label-yellow.png')
+
+  .title:before
+    sprite('../../sprite/sprite-present-yellow.png')
+
+  .sub
+    color: $yellow2
+
+.red
+  .item:before
+    sprite('../../sprite/sprite-label-red.png')
+
+  .title:before
+    sprite('../../sprite/sprite-present-red.png')
+
+  .sub
+    color: $red
+
+.green
+  .item:before
+    sprite('../../sprite/sprite-label-green.png')
+
+  .title:before
+    sprite('../../sprite/sprite-present-green.png')
+
+  .sub
+    color: $green
+
+.blue
+  .item:before
+    sprite('../../sprite/sprite-label-blue.png')
+
+  .title:before
+    sprite('../../sprite/sprite-present-blue.png')
+
+.sub
+    color: $blue
+
+.cyan
+  .item:before
+    sprite('../../sprite/sprite-label-cyan.png')
+
+  .title:before
+    sprite('../../sprite/sprite-present-cyan.png')
+
+.sub
+    color: $cyan
+

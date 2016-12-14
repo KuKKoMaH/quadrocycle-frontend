@@ -1,0 +1,18 @@
+- var menu = ['Стоимость', 'Маршруты', 'Лучшее предложение', 'Мотопарк', 'Подарить другу', 'Контакты'];
+
+header.header
+  .wrapper
+    .cont
+      .menu_and_logo
+        .logo
+          .logo_image
+        nav.menu
+          for item in menu
+            .item: a(href='#')= item
+      .phones
+        .inner
+          .phone #[.code +7 (812)] 222-99-99
+          .phone #[.code +7 (911)] 002-92-33
+          .type ( Viber или WhatsApp )
+      .fos
+        a.call.open_popup(href='#callback')

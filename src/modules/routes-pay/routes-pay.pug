@@ -1,0 +1,34 @@
+include ../button/button
+
+.block
+  .col
+    .title Оплата картой
+    .text
+      |Вы можете оплатить прокат квадроцикла с помощью#[br]
+      |банковской карты VISA / MasterCard. Для этого#[br]
+      |в форме справа выберите нужный вам вариант#[br]
+      |и перейдите к платёжной системе
+  .col
+    form.form
+      .row
+        .input_wrapper.select_wrapper
+          select.input.select
+            option(disabled=true selected=true) Выберите маршрут
+            option Сафари
+            option Семейный
+            option Детский
+            option Красносел
+            option Зимнее сафари
+            option Прогулка
+        .input_wrapper
+          input.input(placeholder='К-во чел.')
+          button.dec
+          button.inc
+        .input_wrapper
+          input.input(placeholder='К-во часов')
+          button.dec
+          button.inc
+      .row
+        .total Итого стоимость: #[span.total_value 25 000] руб.
+        .button: +button('submit', 'перейти к оплате')
+

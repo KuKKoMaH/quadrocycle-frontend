@@ -1,0 +1,12 @@
+include ../button/button
+
+mixin popup(header, submit, id)
+  - id = id || null
+  .popup(id=id)
+    .header= header
+    .content
+      p.text Оставьте свои данные и мы перезвоним вам в течение 5 минут
+      .inputs
+        .input_wrapper: input.input(placeholder='Ваше имя')
+        .input_wrapper: input.input(placeholder='Телефон')
+      +button('sm')= submit

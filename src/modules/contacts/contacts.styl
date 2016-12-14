@@ -1,0 +1,97 @@
+$height = 458px
+
+.block
+  margin-top: 55px
+  width: 100%
+  position: relative
+
+.content
+  position: relative
+  color: $white
+
+.col
+  span(6)
+  height: $height
+  position: relative
+  z-index: 1
+  padding-top: 70px
+
+.tabs
+  position: relative
+
+.tab
+  position: absolute
+  width: 100%
+  opacity: 0
+  left: 0
+  top: 0
+  transition: all .2s ease-out
+
+  &_active
+    position: relative
+    opacity: 1
+    z-index: 1
+
+  h6
+    font-size: 18px
+    font-weight: bold
+    margin: 0 0 30px
+
+  p
+    font-size: 15px
+    line-height: 1.8
+
+.close
+  position: absolute
+  right: 0
+  top: 0
+  sprite('../../sprite/sprite-close.png')
+
+.bg
+  height: $height
+  width: 50%
+  right: 50%
+  position: absolute
+  background: url(../../img/footer.jpg) 50% 100% no-repeat
+
+:global(#map)
+  width: 50%
+  height: $height
+  position: absolute
+  left: 50%
+  top: 0
+
+.loc
+  margin: 0 0 80px 200px
+  padding-left: 40px
+  position: relative
+  font-size: 18px
+  line-height: 1.7
+
+  &:before
+    content: ''
+    display: block
+    position: absolute
+    left: 0
+    top: 0
+    sprite('../../sprite/sprite-geo.png')
+
+.how
+  padding-top: 43px
+  letter-spacing: 2px
+  span(5)
+
+.phones
+  span(7)
+  font-size: 15px
+  line-height: 1.2
+
+  b
+    font-size: 28px
+
+.buttons
+  span(12)
+  margin-top: 20px
+
+.button
+  margin-right: 30px

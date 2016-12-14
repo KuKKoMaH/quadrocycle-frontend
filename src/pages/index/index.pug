@@ -1,0 +1,19 @@
+extends ../../layout/layout
+include ../../modules/popup/popup
+
+block body
+  include ../../modules/header/header
+  include ../../modules/header_slide/header_slide
+  include ../../modules/bullets/bullets
+  include ../../modules/prices/prices
+  include ../../modules/routes/routes
+  include ../../modules/additional/additional
+  include ../../modules/park/park
+  include ../../modules/presents/presents
+  include ../../modules/photos/photos
+  include ../../modules/testimonials/testimonials
+  include ../../modules/service/service
+  include ../../modules/contacts/contacts
+  .popup
+    +popup('Обратный звонок', 'Отправить запрос', 'callback')
+    +popup('Оставить заявку', 'Отправить', 'request')

@@ -1,0 +1,55 @@
+.block
+  margin-top: 113px
+  margin-bottom: 80px
+
+.cont
+  position: relative
+  margin: 0 -5px
+  cf()
+
+  &:before
+    content: ''
+    position: absolute
+    height: 60px
+    left: 5px
+    right: 5px
+    bottom: 0
+    box-shadow: 0px 5px 70px 0px rgba(0, 0, 0, 0.15);
+
+.item
+  float: left
+  width: 20%
+  text-align: center
+  position: relative
+  z-index:1
+
+  &_inner
+    margin: 0 5px
+    border: 2px solid $grey200
+    height: 146px
+    padding-top: 6px
+    background: $white
+
+.image
+  height: 70px
+  line-height: 70px
+  color: $yellow
+  font-size: 36px
+  ff_days()
+
+.min
+  font-size: 50%
+
+.text
+  font-size: 15px
+  font-weight: bold
+  
+.flag,
+.shield
+  vc()
+
+.flag
+  sprite('../../sprite/sprite-flag.png')
+
+.shield
+  sprite('../../sprite/sprite-shield.png')

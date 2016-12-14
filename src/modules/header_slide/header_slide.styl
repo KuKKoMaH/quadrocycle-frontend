@@ -1,0 +1,40 @@
+.block
+  background: url('../../img/header.jpg') 50% 0
+  height: 100%
+  min-height 550px
+  max-height: 1080px
+  color: $white
+  position: relative
+
+.bottom
+  position: absolute
+  bottom: 0
+  width: 100%
+
+.content
+  padding-bottom: 120px
+  text-shadow: 0 1px 0 rgba($black, 0.3)
+
+.title
+  span(12)
+  font-weight: normal
+  margin: 0 0 30px
+  ff_days()
+  font-size: 52px
+  line-height: 1.4
+
+.loc
+  span(5)
+  font-weight: bold
+  &:before
+    content: ''
+    vc()
+    sprite('../../sprite/sprite-geo.png')
+    margin-right: 25px
+
+.fos
+  span(7)
+
+.button
+  vc()
+  margin-left: 35px
