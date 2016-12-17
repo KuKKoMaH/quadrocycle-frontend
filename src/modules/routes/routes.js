@@ -1,5 +1,6 @@
 var styles = require('../../js/styles').modules.routes;
 var $ = require('jquery');
+var lazyload = require('../../pages/index/index');
 
 var $headers = $('.' + styles.header);
 var $content = $('.' + styles.tab);
@@ -10,4 +11,5 @@ $headers.on('click', function(){
   var $this = $(this);
   $this.addClass(styles.header_active);
   $('#' + $this.data('for')).addClass(styles.tab_active);
+  lazyload.update();
 });

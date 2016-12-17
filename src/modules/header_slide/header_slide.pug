@@ -1,6 +1,6 @@
 include ../button/button
 
-.block
+.block(style='background: url(../../img/header.jpg)')
   .bottom
     .wrapper
       .cont.content
@@ -12,5 +12,5 @@ include ../button/button
           .loc СНТ Надежда (юго-запад), 10 км от КАД
           .fos
             | Оставьте заявку и получите консультацию о прокате
-            a.button.open_popup(href='#request')
+            a.button.open_popup(href='#request' data-type='Консультация о прокате')
               +button() Оставить заявку

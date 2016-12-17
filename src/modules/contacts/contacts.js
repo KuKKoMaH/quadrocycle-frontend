@@ -9,7 +9,6 @@ $('.' + styles.button).on('click', function (e) {
   $content.removeClass(styles.tab_active);
   var $this = $(this);
   $('#' + $this.data('for')).addClass(styles.tab_active);
-
 });
 
 function createMap() {

@@ -14,21 +14,19 @@ include ../button/button
         .input_wrapper.select_wrapper
           select.input.select
             option(disabled=true selected=true) Выберите маршрут
-            option Сафари
-            option Семейный
-            option Детский
-            option Красносел
-            option Зимнее сафари
-            option Прогулка
+            option(value='Сафари') Сафари
+            option(value='Семейный') Семейный
+            option(value='Детский') Детский
+            option(value='Красносел') Красносел
+            option(value='Зимнее сафари') Зимнее сафари
+            option(value='Прогулка') Прогулка
         .input_wrapper
-          input.input(placeholder='К-во чел.')
-          button.dec
-          button.inc
-        .input_wrapper
-          input.input(placeholder='К-во часов')
+          input.input.count(placeholder='К-во чел.')
           button.dec
           button.inc
       .row
-        .total Итого стоимость: #[span.total_value 25 000] руб.
+        .total
         .button: +button('submit', 'перейти к оплате')
-
+    script.
+      var ROUTES = { 'Сафари': [2000, 1600], 'Семейный': [5000, 4000], 'Детский': [200, 100], 'Красносел': [345, 123],
+        'Зимнее сафари': [2000, 1600], 'Прогулка': [2000, 1600]};
