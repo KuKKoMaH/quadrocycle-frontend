@@ -21,12 +21,16 @@ include ../button/button
             option(value='Зимнее сафари') Зимнее сафари
             option(value='Прогулка') Прогулка
         .input_wrapper
-          input.input.count(placeholder='К-во чел.')
-          button.dec
-          button.inc
+          input.input.people(placeholder='К-во чел.')
+          button.dec(tabindex=-1)
+          button.inc(tabindex=-1)
+        .input_wrapper
+          input.input.quadro(placeholder='К-во квадроциклов')
+          button.dec(tabindex=-1)
+          button.inc(tabindex=-1)
       .row
         .total
         .button: +button('submit', 'перейти к оплате')
     script.
-      var ROUTES = { 'Сафари': [2000, 1600], 'Семейный': [5000, 4000], 'Детский': [200, 100], 'Красносел': [345, 123],
-        'Зимнее сафари': [2000, 1600], 'Прогулка': [2000, 1600]};
+      var ROUTES = { 'Сафари': [2000, 1600, 300], 'Семейный': [5000, 4000, 200], 'Детский': [200, 100, 100],
+        'Красносел': [345, 123, 300], 'Зимнее сафари': [2000, 1600, 300], 'Прогулка': [2000, 1600, 300]};

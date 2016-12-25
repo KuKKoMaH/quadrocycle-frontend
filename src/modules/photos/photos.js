@@ -15,7 +15,11 @@ $moreButton.on('click', function() {
 
 $photos.magnificPopup({
   delegate: 'a',
-  type: 'image',
+  callbacks: {
+    elementParse: function(item) {
+      item.type = item.el.data('type') || 'image';
+    }
+  },
   gallery: {
     enabled: true,
     navigateByImgClick: true,

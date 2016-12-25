@@ -3,7 +3,8 @@ var $ = require('jquery');
 
 var $total = $('.' + styles.total);
 var $routeSelect = $('.' + styles.select);
-var $countSelect = $('.' + styles.count);
+var $peopleSelect = $('.' + styles.people);
+var $quadroSelect = $('.' + styles.quadro);
 var routes = window.ROUTES || {};
 
 var regExp = /[.,]/;
@@ -32,12 +33,22 @@ $('.' + styles.dec).on('click', function (e) {
   updateTotal();
 });
 
-$countSelect.on('keyup', updateTotal);
+$peopleSelect.on('keyup', updateTotal);
+$quadroSelect.on('keyup', updateTotal);
 $routeSelect.on('change', updateTotal);
 
 function updateTotal() {
   var route = routes[$routeSelect.val()];
-  var count = +$countSelect.val();
-  var total = ( +route[count > 1 ? 1 : 0] || 0) * count;
-  $total.html(total ? 'Итого стоимость: <span class="' + styles.total_value + '">' + toMoney(total) + ' руб.' : '');
+  var count = Number.parseInt($peopleSelect.val());
+  var quadro = Number.parseInt($quadroSelect.val());
+
+  if (isNaN(count) || count < 1 || isNaN(quadro) || quadro < 1 || !route || count < quadro || count > quadro * 2) {
+    $total.html('');
+    return;
+  }
+
+  var perQuadro = +route[quadro > 2 ? 1 : 0] || 0;
+  var additionalPeople = count === quadro ? 0 : count - quadro;
+  var total = perQuadro * quadro + additionalPeople * route[2];
+  $total.html('Итого стоимость: <span class="' + styles.total_value + '">' + toMoney(total) + ' руб.');
 }
