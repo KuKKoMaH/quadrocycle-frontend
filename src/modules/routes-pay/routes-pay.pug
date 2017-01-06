@@ -22,12 +22,12 @@ include ../button/button
             option(value='Прогулка') Прогулка
         .input_wrapper
           input.input.people(placeholder='К-во чел.')
-          button.dec(tabindex=-1)
-          button.inc(tabindex=-1)
+          .dec(tabindex=-1)
+          .inc(tabindex=-1)
         .input_wrapper
           input.input.quadro(placeholder='К-во квадроциклов')
-          button.dec(tabindex=-1)
-          button.inc(tabindex=-1)
+          .dec(tabindex=-1)
+          .inc(tabindex=-1)
       .row
         .total
         .button: +button('submit', 'перейти к оплате')

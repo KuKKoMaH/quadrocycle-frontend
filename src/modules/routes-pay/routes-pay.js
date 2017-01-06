@@ -7,6 +7,10 @@ var $peopleSelect = $('.' + styles.people);
 var $quadroSelect = $('.' + styles.quadro);
 var routes = window.ROUTES || {};
 
+var routeName;
+var count;
+var quadro;
+
 var regExp = /[.,]/;
 function toMoney (amount) {
   var rub = ('' + amount).split(regExp)[0];
@@ -38,9 +42,10 @@ $quadroSelect.on('keyup', updateTotal);
 $routeSelect.on('change', updateTotal);
 
 function updateTotal() {
-  var route = routes[$routeSelect.val()];
-  var count = Number.parseInt($peopleSelect.val());
-  var quadro = Number.parseInt($quadroSelect.val());
+  routeName = $routeSelect.val();
+  count = Number.parseInt($peopleSelect.val());
+  quadro = Number.parseInt($quadroSelect.val());
+  var route = routes[routeName];
 
   if (isNaN(count) || count < 1 || isNaN(quadro) || quadro < 1 || !route || count < quadro || count > quadro * 2) {
     $total.html('');
@@ -52,3 +57,21 @@ function updateTotal() {
   var total = perQuadro * quadro + additionalPeople * route[2];
   $total.html('Итого стоимость: <span class="' + styles.total_value + '">' + toMoney(total) + ' руб.');
 }
+
+$('.' + styles.form).on('submit', function (e) {
+  e.preventDefault();
+  if (!routeName || !count || !quadro) return;
+
+  var info = 'Выбранный маршрут: ' + routeName + '<br/>' +
+      'Количество человек: ' + count + '<br/>' +
+      'Количество квадроциклов: ' + quadro;
+
+  $("#route-popup .info").html(info);
+
+  $.magnificPopup.open({
+    items: {
+      src: '#route-popup',
+      type: 'inline'
+    }
+  }, 0);
+});

@@ -9,7 +9,7 @@ block body
   include ../../modules/routes/routes
   include ../../modules/additional/additional
   include ../../modules/park/park
-  include ../../modules/presents/presents
+  //include ../../modules/presents/presents
   include ../../modules/photos/photos
   include ../../modules/testimonials/testimonials
   include ../../modules/service/service
@@ -17,3 +17,4 @@ block body
   .popup
     +popup('Обратный звонок', 'Отправить запрос', 'callback')
     +popup('Оставить заявку', 'Отправить', 'request')
+    +popup('Оставить заявку', 'Отправить', 'route-popup', '<span class="info"></span>')

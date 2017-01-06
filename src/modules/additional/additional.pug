@@ -2,7 +2,14 @@ include ../button/button
 
 .wrapper.block
   .cont
-    .left
+    .row
+      .title Условия проката
+      .items
+        .item.passport Паспорт
+        .item.money Залог 5 000 руб.
+        .item.child Дети до 14 лет в качестве пассажиров
+      .more_wrapper: a.more(href='#'): +button() Подробнее об условиях
+    .row
       .title Дополнительно
       .lists
         .list
@@ -18,9 +25,7 @@ include ../button/button
         .list
           .list_title Катание на ватрушках за квадроциклом или снегоходом
           .bullet 200 руб.
-    .right
-      .title Условия проката
-      a.more(href='#'): +button() Подробнее об условиях
-      .passport Паспорт
-      .money Залог 5 000 руб.
-      .child Дети до 14 лет в качестве пассажиров
+
+        .list
+          .list_title Обучение навыкам вождения
+          .sub Подготовка к сдаче экзаменов на права кат. А1, А2

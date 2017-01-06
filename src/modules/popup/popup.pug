@@ -1,11 +1,12 @@
 include ../button/button
 
-mixin popup(header, submit, id)
+mixin popup(header, submit, id, text)
   - id = id || null
+  - text = text || 'Оставьте свои данные и мы перезвоним вам в течение 5 минут'
   .popup(id=id)
     .header= header
     .content
-      p.text Оставьте свои данные и мы перезвоним вам в течение 5 минут
+      p.text !{text}
       form
         .inputs
           .input_wrapper: input.input(placeholder='Ваше имя')

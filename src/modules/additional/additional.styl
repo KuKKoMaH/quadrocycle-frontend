@@ -3,24 +3,47 @@
   margin-bottom: 74px
   font-size: 14px
 
-.left
-  span(7)
+.row
+  span(12)
 
-.right
-  span(5)
+.items
+  span(9)
+
+.item
+  float: left
+  margin-right: 24px
+  line-height: 51px
+  position: relative
+  padding-left: 32px
+
+  &:before
+    content ''
+    position: absolute
+    left:0
+    top: 16px
+
+.passport:before
+  sprite('../../sprite/sprite-passport.png')
+.money:before
+  sprite('../../sprite/sprite-money.png')
+  top: 18px
+.child:before
+  sprite('../../sprite/sprite-child.png')
+  left: 4px
 
 .title
+  span(12)
   ff_days()
   font-size: 16px
   font-weight: normal
   text-transform: uppercase
-  margin-bottom: 32px
+  margin-top: 32px
 
 .lists
   content()
 
 .list
-  span(4)
+  span(3)
 
 .list_title
   font-size: 16px
@@ -48,28 +71,8 @@
   padding-left: 8px
 
 .more
-  float: right
   position: relative
   z-index: 1
 
-.passport,
-.money,
-.child
-  position: relative
-  padding-left: 42px
-  padding-bottom: 17px
-  &:before
-    content ''
-    position: absolute
-    left:0
-    top: 0
-
-.passport:before
-  sprite('../../sprite/sprite-passport.png')
-.money:before
-  sprite('../../sprite/sprite-money.png')
-  top: 2px
-.child:before
-  sprite('../../sprite/sprite-child.png')
-  left: 4px
-
+  &_wrapper
+    span(3)
